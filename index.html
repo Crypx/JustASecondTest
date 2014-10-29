@@ -9,16 +9,61 @@
 
 	
 </style>
-<style type="text/css"></style></head>
+<style type="text/css"></style>
+
+  <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+	
+
+
+    </script>
+
+
+
+
+
+</head>
 <body bgcolor="#e4c8a5">
 
 	<div id="h" />
 
 	
 
-	<button id="bl" onclick="window.location.href='button1.html'">Button 1</button> <button id="br" onclick="window.location.href='button2.html'">Button 2</button>
+	<button id="bl" onclick="showAlert()">Show Alert!!</button> <button id="br" onclick="playBeep()">Play Beep()</button>
 
-	<button id="bl" onclick="window.location.href='button3.html'">Button 3</button> <button id="br" onclick="window.location.href='button4.html'">Button 4</button>
+	<button id="bl" onclick="vibrate()">Vibrate!!!</button> <button id="br" onclick="hello()">Button 4</button>
 
 
 	
